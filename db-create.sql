@@ -1,0 +1,12 @@
+CREATE DATABASE wilde_bwd;
+
+use wilde_bwd;
+
+CREATE TABLE works (
+	id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+	artist VARCHAR(30) NOT NULL,
+	song VARCHAR(50) NOT NULL,
+	release VARCHAR(30),
+    genre VARCHAR(30),
+	date TIMESTAMP
+);
