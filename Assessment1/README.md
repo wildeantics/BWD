@@ -15,7 +15,6 @@ On individual pages the ability to tick recipe ingrediants
 Filter by protien
 Search by name
 
-On the recipe pages the page will pull from the recipies table for a single item, and any items in the ingredients table that reference the chosen forgein key.
 
 ### Pages
 ```
@@ -56,13 +55,9 @@ wilde_bwd
 │   ├── id (PK)
 │   ├── recipe
 │   ├── recipe_description
-│   └── recipe_method
-├── ingredients
-│   ├── id (PK)
-│   ├── recipe (FK)
-│   ├── ingredient
-│   ├── amount
-│   └── protien
+│   ├── recipe_method
+│   ├── protien
+│   └── ingredients
 └── users
     ├── id
     ├── username

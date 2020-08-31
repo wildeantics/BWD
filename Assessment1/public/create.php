@@ -8,20 +8,21 @@ try {
         "recipe"    => $_POST['recipe'], 
         "recipe_description"     => $_POST['recipe_description'],
         "recipe_method"      => $_POST['recipe_method'],
-        "ingredient"      => $_POST['ingredient'], 
-        "amount"      => $_POST['amount'], 
+        "ingredients"      => $_POST['ingredients'],  
         "protien"      => $_POST['protien'], 
     );
-    $sql = "INSERT INTO works (
+    $sql = "INSERT INTO recipies (
         recipe,
         recipe_description,
         recipe_method,
-        ingredient
+        protien,
+        ingredients
     ) VALUES (
         :recipe,
         :recipe_description,
         :recipe_method,
-        :ingredient
+        :protien,
+        :ingredients
     )";  
     $statement = $connection->prepare($sql);
     $statement->execute($new_work);
@@ -46,11 +47,17 @@ include "templates/header.php";
 <label for="recipe_description">Recipe Description</label> 
 <input type="text" name="recipe_description" id="recipe_description"> 
 <label for="recipe_method">Method</label> 
-<input type="date" name="recipe_method" id="recipe_method">
-<label for="protien">Protien</label> 
-<input type="date" name="protien" id="protien">
-<label for="ingredient">Ingredient</label> 
-<input type="text" name="ingredient" id="ingredient">
+<input type="textarea" name="recipe_method" id="recipe_method">
+<label for="protien">Protien</label>
+<select name="protien" id="protien">
+    <option value="beef">Beef</option>
+    <option value="pork">Pork</option>
+    <option value="poultry">Poultry</option>
+    <option value="dairy">Dairy</option>
+    <option value="vegetables">Vegetables</option>
+</select>
+<label for="ingredients">Ingredients</label> 
+<input type="textarea" name="ingredients" id="ingredients">
 <label for="amount">Amount</label> 
 <input type="text" name="amount" id="amount">
 <input type="submit" name="submit" value="Submit">
