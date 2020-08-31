@@ -6,15 +6,9 @@ CREATE TABLE recipies (
 	id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 	recipe VARCHAR(30) NOT NULL,
 	recipe_description VARCHAR(50) NOT NULL,
-	recipe_method VARCHAR(500) NOT NULL
-);
-CREATE TABLE ingredients (
-	id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    recipe INT(10) UNSIGNED NOT NULL, 
-	FOREIGN KEY (recipe) REFERENCES recipies(id), 
-	ingredient VARCHAR(30) NOT NULL,
-    amount VARCHAR(30),
-    protien VARCHAR(30)
+	recipe_method VARCHAR(500) NOT NULL,
+    protien VARCHAR(30),
+    ingredients VARCHAR(500) NOT NULL
 );
 CREATE TABLE users (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
