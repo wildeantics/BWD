@@ -2,7 +2,7 @@
 <?php
     // include the config file that we created before
     require "../config.php";
-    require "common.php";
+    function escape($html) { return htmlspecialchars($html, ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8"); }
 
     // this code will only execute after the submit button is clicked
     if (isset($_POST['submit'])) {
