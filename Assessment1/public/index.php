@@ -24,13 +24,12 @@
     foreach($result as $row) {
         ?>
         <p>
-        ID: <?php echo $row["id"]; ?><br>
         <?php echo $row['recipe']; ?><br>
         <?php echo $row['recipe_description']; ?><br>
         Protien: <?php echo $row['protien']; ?><br>
         Ingredients: <?php echo $row['ingredients']; ?><br>
         Method: <?php echo $row['recipe_method']; ?><br>
-        <a href='update.php?id=<?php echo $row['id']; ?>'>Edit</a>
+        <a href='update-work.php?id=<?php echo $row['id']; ?>'>Edit</a>
         </p>
         <?php
         // this willoutput all the data from the array

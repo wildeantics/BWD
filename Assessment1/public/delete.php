@@ -23,16 +23,15 @@
             echo $sql . "<br>" . $error->getMessage();
         }
     }
-?>
-<?php include "templates/header.php"; ?>
-<?php
-    if (isset($_POST['submit'])) {
+
+include "templates/header.php";
+
+if (isset($_POST['submit'])) {
     //if there are some results
     if ($result && $statement->rowCount() > 0) {
 ?>
 <h2>Results</h2>
 <?php
-    // This is a loop, which will loop through each result in the array
     foreach($result as $row) {
 ?>
 <p>
