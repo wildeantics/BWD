@@ -2,12 +2,12 @@ CREATE DATABASE wilde_bwd;
 
 use wilde_bwd;
 
-CREATE TABLE recipies (
+CREATE TABLE recipes (
 	id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 	recipe VARCHAR(30) NOT NULL,
-	recipe_description VARCHAR(50) NOT NULL,
+	recipe_description VARCHAR(100) NOT NULL,
 	recipe_method VARCHAR(500) NOT NULL,
-    protien VARCHAR(30),
+    protein VARCHAR(30),
     ingredients VARCHAR(500) NOT NULL
 );
 CREATE TABLE users (

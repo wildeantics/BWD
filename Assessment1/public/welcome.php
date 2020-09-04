@@ -1,4 +1,5 @@
 <?php
+include "templates/header.php";
 // Initialize the session
 session_start();
  
@@ -8,8 +9,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
- 
-<?php include "templates/header.php" ?>
     <div class="page-header">
         <h1>Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
     </div>

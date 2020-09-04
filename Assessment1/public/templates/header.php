@@ -3,14 +3,15 @@
 
 <head>
 
-    <title>Hungry</title>
+    <title>Hungry?</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assests/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
 </head>
-<body>
+<body class="col-10 mx-auto">
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
             <a class="navbar-brand" href="./">Hungry?</a>
@@ -32,3 +33,4 @@
             </div>
         </nav>
     </header>
+    <div class="centre">

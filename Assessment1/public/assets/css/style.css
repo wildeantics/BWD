@@ -1,0 +1,36 @@
+.centre {
+    margin: 80px auto 0px auto;
+    justify-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 400px;
+}
+
+.cards {
+    display: table-cell;
+    width: 200px;
+    max-width: 200px;
+    height: 200px;
+    max-height: 200px;
+    background-color: lightgrey;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid grey;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.inline-label {
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: left; /*Change to right here if you want it close to the inputs*/
+}
+
+.inline-input {
+  float: left;
+  width: max-content;
+}

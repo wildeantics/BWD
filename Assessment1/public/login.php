@@ -1,4 +1,5 @@
 <?php
+include "templates/header.php";
 // Initialize the session
 session_start();
  
@@ -84,7 +85,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Close connection
     unset($pdo_connection);
 }
-include "templates/header.php"
 ?>
 
     <div class="wrapper">

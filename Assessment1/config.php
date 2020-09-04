@@ -2,7 +2,7 @@
 
 $host       = "localhost";
 $username   = "root";
-$password   = "";
+$password   = "root";
 $dbname     = "wilde_bwd"; 
 $dsn        = "mysql:host=$host;dbname=$dbname"; 
 $options    = array(

@@ -8,9 +8,9 @@ Demonstrated ability to deploy a web application to a remote server
 Demonstrated attention to detail throughout the creative work
 
 ## Recipes app
-Provide a page with a list of recipies
+Provide a page with a list of recipes
 The ability to log in
-Once logged in the ability to create new recipies
+Once logged in the ability to create new recipes
 On individual pages the ability to tick recipe ingrediants
 Filter by protien
 Search by name
@@ -51,7 +51,7 @@ main-page
 ### Database
 ```
 wilde_bwd
-├── recipies
+├── recipes
 │   ├── id (PK)
 │   ├── recipe
 │   ├── recipe_description

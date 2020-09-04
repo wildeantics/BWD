@@ -1,12 +1,12 @@
-
 <?php
+include "templates/header.php";
     require "../config.php";
     // this is called a try/catch statement
     try {
         // FIRST: Connect to the database
         $connection = new PDO($dsn, $username, $password, $options);
         // SECOND: Create the SQL
-        $sql = "SELECT * FROM recipies";
+        $sql = "SELECT * FROM recipes";
         // THIRD: Prepare the SQL
         $statement = $connection->prepare($sql);
         $statement->execute();
@@ -17,26 +17,25 @@
         echo $sql . "<br>" . $error->getMessage();
     }
 ?>
-<?php include "templates/header.php"; ?>
-<h2>Recipies</h2>
+
+<h2>Recipes</h2>
 <?php
+    
     // This is a loop, which will loop through each result in the array
     foreach($result as $row) {
         ?>
-        <p>
+        <p class="cards">
         <?php echo $row['recipe']; ?><br>
         <?php echo $row['recipe_description']; ?><br>
-        Protien: <?php echo $row['protien']; ?><br>
+        Protein: <?php echo $row['protein']; ?><br>
         Ingredients: <?php echo $row['ingredients']; ?><br>
         Method: <?php echo $row['recipe_method']; ?><br>
-        <a href='update-work.php?id=<?php echo $row['id']; ?>'>Edit</a>
+        <a href='update-work.php?id=<?php echo $row['id']; ?>'>Edit</a> | 
+        <a href='view.php?id=<?php echo $row['id']; ?>'>View</a>
         </p>
         <?php
-        // this willoutput all the data from the array
-        //echo '<pre>'; var_dump($row);
-        ?>
-        <hr>
-        <?php
-    }; //close the foreach
+    };
 ?>
+
+</div>
 <?php include "templates/footer.php"; ?>
